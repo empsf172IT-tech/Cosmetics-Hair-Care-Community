@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8" />
@@ -12,6 +12,14 @@
   <meta name="keywords"
     content="luxury hair care, sulfate-free shampoo, curl definition, hair diagnostic quiz, hair community, biomimetic peptides, scalp microbiome" />
   <meta name="author" content="STRANDÉ Beauty-Tech / INFOTECH" />
+
+  <!-- Favicon Suite -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <meta name="theme-color" content="#241916" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,7 +67,7 @@
 </head>
 
 <body
-  class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased selection:bg-[#B86F68] selection:text-white transition-colors duration-400">
+  class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased selection:bg-[#B86F68] selection:text-white transition-colors duration-400 overflow-x-hidden w-full max-w-full relative">
 
   <!-- ==========================================================================
        TOP ANNOUNCEMENT BAR
@@ -78,10 +86,10 @@
        ========================================================================== -->
   <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
     <div
-      class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 h-20 flex items-center justify-between gap-3 lg:gap-5">
+      class="max-w-[1680px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-8 2xl:px-10 h-20 flex items-center justify-between">
 
-      <!-- Brand Logo Wordmark -->
-      <a href="#hero" class="flex items-center gap-3 group focus:outline-none flex-shrink-0" aria-label="STRANDÉ Home">
+      <!-- Brand Logo Wordmark (with guaranteed right margin from links) -->
+      <a href="#hero" class="flex items-center gap-3 group focus:outline-none flex-shrink-0 mr-4 xl:mr-6 2xl:mr-10" aria-label="STRANDÉ Home">
         <div
           class="w-10 h-10 rounded-full bg-espresso text-champagne dark:bg-champagne dark:text-espresso flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105 border border-[#B86F68]/30 flex-shrink-0">
           <!-- Strand-inspired bespoke emblem SVG -->
@@ -94,14 +102,14 @@
           <span
             class="font-serif text-2xl md:text-3xl tracking-[0.18em] font-medium text-espresso dark:text-champagne leading-none">STRANDÉ</span>
           <span
-            class="text-[9px] tracking-[0.25em] uppercase text-[#8F7670] dark:text-[#D3BCAB] mt-1 font-semibold leading-none">Intelligent
+            class="text-[9px] tracking-[0.25em] uppercase text-[#8F7670] dark:text-[#D3BCAB] mt-1 font-semibold leading-none hidden sm:block">Intelligent
             Hair Care</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links (Vertically centered, single-line baseline, including Home) -->
+      <!-- Desktop Navigation Links (Properly spaced, balanced, no overflow) -->
       <nav id="desktopNavLinks"
-        class="hidden xl:flex items-center justify-center gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-6 text-[11px] 2xl:text-xs uppercase font-medium text-[#5F4A44] dark:text-[#E3D1BF] flex-1 max-w-5xl mx-2">
+        class="hidden xl:flex items-center justify-center gap-1.5 xl:gap-2.5 2xl:gap-4 min-[1680px]:gap-6 text-[10px] xl:text-[10.5px] 2xl:text-[11.5px] min-[1680px]:text-xs uppercase font-medium text-[#5F4A44] dark:text-[#E3D1BF] flex-1 min-w-0">
         <a href="#hero" class="nav-link hover:text-[#B86F68] transition-colors active">Home</a>
         <a href="#discover" class="nav-link hover:text-[#B86F68] transition-colors">Discover</a>
         <a href="#quiz" class="nav-link hover:text-[#B86F68] transition-colors">Hair Quiz</a>
@@ -116,11 +124,11 @@
       </nav>
 
       <!-- Right Action Controls (Theme, Bag, Mobile Toggle) -->
-      <div class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
+      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
 
-        <!-- Theme Switcher Toggle -->
+        <!-- Theme Switcher Toggle (Desktop/Tablet header, mobile accessible via drawer) -->
         <button id="themeToggleBtn" type="button"
-          class="w-10 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne hover:border-[#B86F68] transition-all flex items-center justify-center focus:outline-none flex-shrink-0"
+          class="hidden sm:flex w-10 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne hover:border-[#B86F68] transition-all items-center justify-center focus:outline-none flex-shrink-0"
           aria-label="Toggle Theme Mode" title="Toggle dark/light theme">
           <svg id="themeIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -130,7 +138,7 @@
 
         <!-- Shopping Bag Trigger with Live Counter -->
         <button id="openCartBtn" type="button"
-          class="relative px-3.5 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne hover:border-[#B86F68] transition-all flex items-center gap-2 focus:outline-none flex-shrink-0"
+          class="relative w-10 h-10 sm:w-auto sm:px-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne hover:border-[#B86F68] transition-all flex items-center justify-center sm:gap-2 focus:outline-none flex-shrink-0"
           aria-label="View Shopping Bag">
           <svg class="w-5 h-5 text-[#B86F68]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -158,10 +166,10 @@
        MOBILE NAVIGATION DRAWER
        ========================================================================== -->
   <div id="mobileNavBackdrop"
-    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 hidden">
   </div>
   <div id="mobileNavDrawer"
-    class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[var(--bg-primary)] border-l border-[var(--border-color)] z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 overflow-y-auto">
+    class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[var(--bg-primary)] border-l border-[var(--border-color)] z-50 transform translate-x-full transition-all duration-300 ease-in-out flex flex-col justify-between p-6 overflow-y-auto hidden">
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-[var(--border-color)]">
         <div class="flex items-center gap-2">
@@ -177,19 +185,52 @@
         </button>
       </div>
 
-      <nav
-        class="flex flex-col py-6 space-y-3.5 text-sm font-medium uppercase tracking-wider text-espresso dark:text-champagne">
-        <a href="#hero" class="hover:text-[#B86F68] transition-colors py-1">01. Home</a>
-        <a href="#discover" class="hover:text-[#B86F68] transition-colors py-1">02. Discover</a>
-        <a href="#quiz" class="hover:text-[#B86F68] transition-colors py-1">03. Hair Diagnostic Quiz</a>
-        <a href="#routines" class="hover:text-[#B86F68] transition-colors py-1">04. Custom Routines</a>
-        <a href="#shop" class="hover:text-[#B86F68] transition-colors py-1">05. Product Collection</a>
-        <a href="#sulfate-free" class="hover:text-[#B86F68] transition-colors py-1">06. Sulfate-Free Science</a>
-        <a href="#subscriptions" class="hover:text-[#B86F68] transition-colors py-1">07. Replenishment Studio</a>
-        <a href="#community" class="hover:text-[#B86F68] transition-colors py-1">08. Community Hub</a>
-        <a href="#reviews" class="hover:text-[#B86F68] transition-colors py-1">09. Reviews & Gallery</a>
-        <a href="#knowledge" class="hover:text-[#B86F68] transition-colors py-1">10. Hair Journal</a>
-        <a href="#about" class="hover:text-[#B86F68] transition-colors py-1">11. Brand Story</a>
+      <nav id="mobileNavLinks"
+        class="flex flex-col py-5 space-y-1.5 text-xs font-semibold uppercase tracking-wider">
+        <a href="#hero" class="mobile-nav-link active">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">01.</span>Home</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#discover" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">02.</span>Discover</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#quiz" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">03.</span>Hair Diagnostic Quiz</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#routines" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">04.</span>Custom Routines</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#shop" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">05.</span>Product Collection</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#sulfate-free" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">06.</span>Sulfate-Free Science</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#subscriptions" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">07.</span>Replenishment Studio</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#community" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">08.</span>Community Hub</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#reviews" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">09.</span>Reviews & Gallery</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#knowledge" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">10.</span>Hair Journal</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#about" class="mobile-nav-link">
+          <span class="flex items-center"><span class="mobile-nav-num opacity-50 mr-2 text-[11px] font-mono">11.</span>Brand Story</span>
+          <svg class="w-4 h-4 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
       </nav>
     </div>
 
@@ -270,16 +311,15 @@
             class="pt-8 border-t border-[var(--border-subtle)] grid grid-cols-3 gap-4 text-center sm:text-left scroll-mt-28">
             <div>
               <div class="font-serif text-2xl sm:text-3xl font-semibold text-espresso dark:text-champagne">100%</div>
-              <div class="text-[11px] text-[#8F7670] mt-0.5 uppercase tracking-wider">Sulfate-Conscious</div>
+              <div class="text-[11px] text-[#8F7670] dark:text-[#D3BCAB] mt-0.5 uppercase tracking-wider font-medium">Sulfate-Conscious</div>
             </div>
             <div>
               <div class="font-serif text-2xl sm:text-3xl font-semibold text-espresso dark:text-champagne">14,800+</div>
-              <div class="text-[11px] text-[#8F7670] mt-0.5 uppercase tracking-wider">Community Journeys</div>
+              <div class="text-[11px] text-[#8F7670] dark:text-[#D3BCAB] mt-0.5 uppercase tracking-wider font-medium">Community Journeys</div>
             </div>
             <div>
-              <div class="font-serif text-2xl sm:text-3xl font-semibold text-espresso dark:text-champagne">Type 1–4C
-              </div>
-              <div class="text-[11px] text-[#8F7670] mt-0.5 uppercase tracking-wider">Universal Textures</div>
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-espresso dark:text-champagne">Type 1–4C</div>
+              <div class="text-[11px] text-[#8F7670] dark:text-[#D3BCAB] mt-0.5 uppercase tracking-wider font-medium">Universal Textures</div>
             </div>
           </div>
         </div>
@@ -296,7 +336,7 @@
 
             <!-- Floating Luxury Feature Card 1 -->
             <div
-              class="absolute -bottom-6 -left-6 sm:bottom-8 sm:-left-8 glass-panel p-4 rounded-2xl shadow-xl max-w-[240px] animate-float">
+              class="absolute bottom-4 left-3 sm:bottom-8 sm:-left-8 glass-panel p-3.5 sm:p-4 rounded-2xl shadow-xl max-w-[210px] sm:max-w-[240px] animate-float">
               <div class="flex items-center gap-3">
                 <div
                   class="w-10 h-10 rounded-xl bg-[#B86F68] text-white flex items-center justify-center flex-shrink-0">
@@ -306,18 +346,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h6 class="text-xs font-bold text-espresso dark:text-champagne leading-tight">Cellular Biomimetics
-                  </h6>
-                  <p class="text-[10px] text-[#8F7670] mt-0.5">Bio-identical amino peptides that bond to keratin</p>
+                  <h6 class="text-xs font-bold text-espresso dark:text-white leading-tight">Cellular Biomimetics</h6>
+                  <p class="text-[11px] text-[#5F4A44] dark:text-[#F3E5D8] font-normal leading-normal mt-0.5">Bio-identical amino peptides that bond to keratin</p>
                 </div>
               </div>
             </div>
 
             <!-- Floating Luxury Feature Card 2 -->
             <div
-              class="absolute -top-4 -right-4 sm:top-6 sm:-right-6 glass-panel py-2 px-3.5 rounded-full shadow-lg flex items-center gap-2">
+              class="absolute top-3 right-3 sm:top-6 sm:-right-6 glass-panel py-1.5 px-3 sm:py-2 sm:px-3.5 rounded-full shadow-lg flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span class="text-xs font-semibold text-espresso dark:text-champagne">100% Leaping Bunny Certified</span>
+              <span class="text-xs font-semibold text-espresso dark:text-white">100% Leaping Bunny Certified</span>
             </div>
           </div>
         </div>
@@ -1299,10 +1338,10 @@
        SLIDE-OUT SHOPPING BAG DRAWER
        ========================================================================== -->
   <div id="cartBackdrop"
-    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 hidden">
   </div>
   <div id="cartDrawer"
-    class="fixed top-0 right-0 bottom-0 w-96 max-w-[90vw] bg-[var(--bg-primary)] border-l border-[var(--border-color)] z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
+    class="fixed top-0 right-0 bottom-0 w-96 max-w-[90vw] bg-[var(--bg-primary)] border-l border-[var(--border-color)] z-50 transform translate-x-full transition-all duration-300 ease-in-out flex flex-col justify-between shadow-2xl hidden">
     <!-- Header -->
     <div class="p-6 border-b border-[var(--border-color)] flex items-center justify-between">
       <div class="flex items-center gap-2">

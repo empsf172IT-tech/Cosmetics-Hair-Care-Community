@@ -68,11 +68,59 @@ function initNavigation() {
   const closeMobileNavBtn = document.getElementById('closeMobileNavBtn');
   const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
   const backToTopBtn = document.getElementById('backToTopBtn');
+  const scrollTargets = document.querySelectorAll('section[id], #discover');
+  const desktopNavLinks = document.querySelectorAll('#desktopNavLinks .nav-link');
+  const mobileNavLinks = document.querySelectorAll('#mobileNavDrawer .mobile-nav-link');
   
+  // Dynamic active state tracker for desktop and mobile/tablet drawer
+  function updateActiveNavState() {
+    const scrollPos = window.scrollY + 160;
+    let currentId = 'hero';
+    
+    scrollTargets.forEach(target => {
+      const rect = target.getBoundingClientRect();
+      const top = rect.top + window.scrollY;
+      const height = target.offsetHeight;
+      const id = target.getAttribute('id');
+      
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = id;
+      }
+    });
+
+    // If at bottom of page, highlight the last section (#about)
+    if ((window.innerHeight + Math.round(window.scrollY)) >= document.documentElement.scrollHeight - 60) {
+      currentId = 'about';
+    }
+
+    // Highlight desktop links
+    desktopNavLinks.forEach(link => {
+      if (link.getAttribute('href') === `#${currentId}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    // Highlight mobile/tablet drawer links
+    mobileNavLinks.forEach(link => {
+      if (link.getAttribute('href') === `#${currentId}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
   // Mobile drawer open/close
   function openMobileNav() {
-    mobileNavDrawer.classList.remove('translate-x-full');
+    updateActiveNavState();
+    mobileNavBackdrop.classList.remove('hidden');
+    mobileNavDrawer.classList.remove('hidden');
+    // Force reflow for smooth transition
+    void mobileNavDrawer.offsetWidth;
     mobileNavBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+    mobileNavDrawer.classList.remove('translate-x-full');
     document.body.style.overflow = 'hidden';
   }
   
@@ -80,24 +128,29 @@ function initNavigation() {
     mobileNavDrawer.classList.add('translate-x-full');
     mobileNavBackdrop.classList.add('opacity-0', 'pointer-events-none');
     document.body.style.overflow = '';
+    setTimeout(() => {
+      if (mobileNavDrawer.classList.contains('translate-x-full')) {
+        mobileNavDrawer.classList.add('hidden');
+        mobileNavBackdrop.classList.add('hidden');
+      }
+    }, 300);
   }
   
   if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileNav);
   if (closeMobileNavBtn) closeMobileNavBtn.addEventListener('click', closeMobileNav);
   if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileNav);
   
-  // Close mobile nav when clicking any nav link
-  document.querySelectorAll('#mobileNavDrawer a').forEach(link => {
-    link.addEventListener('click', closeMobileNav);
+  // Close mobile nav when clicking any nav link & set active immediately
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNavLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      closeMobileNav();
+    });
   });
   
-  // Scrollspy for active state
-  const scrollTargets = document.querySelectorAll('section[id], #discover');
-  const desktopNavLinks = document.querySelectorAll('#desktopNavLinks .nav-link');
-  
+  // Window scroll event
   window.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY + 140;
-    
     // Back to top visibility
     if (backToTopBtn) {
       if (window.scrollY > 400) {
@@ -107,22 +160,11 @@ function initNavigation() {
       }
     }
     
-    // Active navigation item tracking
-    scrollTargets.forEach(target => {
-      const top = target.offsetTop;
-      const height = target.offsetHeight;
-      const id = target.getAttribute('id');
-      
-      if (scrollPos >= top && scrollPos < top + height) {
-        desktopNavLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
+    updateActiveNavState();
   });
+
+  // Initial active state update on page load
+  updateActiveNavState();
   
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', () => {
@@ -2240,8 +2282,11 @@ window.openCartDrawer = function() {
   const drawer = document.getElementById('cartDrawer');
   const backdrop = document.getElementById('cartBackdrop');
   if (drawer && backdrop) {
-    drawer.classList.remove('translate-x-full');
+    backdrop.classList.remove('hidden');
+    drawer.classList.remove('hidden');
+    void drawer.offsetWidth;
     backdrop.classList.remove('opacity-0', 'pointer-events-none');
+    drawer.classList.remove('translate-x-full');
     document.body.style.overflow = 'hidden';
   }
 };
@@ -2253,6 +2298,12 @@ window.closeCartDrawer = function() {
     drawer.classList.add('translate-x-full');
     backdrop.classList.add('opacity-0', 'pointer-events-none');
     document.body.style.overflow = '';
+    setTimeout(() => {
+      if (drawer.classList.contains('translate-x-full')) {
+        drawer.classList.add('hidden');
+        backdrop.classList.add('hidden');
+      }
+    }, 300);
   }
 };
 
