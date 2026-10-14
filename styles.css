@@ -280,8 +280,8 @@ html.dark header.glass-nav.is-scrolled {
 }
 @media (min-width: 1536px) {
   .nav-link {
-    letter-spacing: 0.06em;
-    padding: 0.4rem 0.45rem;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.32rem;
   }
 }
 .nav-link::after {
