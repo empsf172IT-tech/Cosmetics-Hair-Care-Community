@@ -63,6 +63,7 @@ function initTheme() {
    2. NAVIGATION, MOBILE MENU & SCROLLSPY
    ========================================================================== */
 function initNavigation() {
+  const header = document.querySelector('header.glass-nav');
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileNavDrawer = document.getElementById('mobileNavDrawer');
   const closeMobileNavBtn = document.getElementById('closeMobileNavBtn');
@@ -72,6 +73,17 @@ function initNavigation() {
   const desktopNavLinks = document.querySelectorAll('#desktopNavLinks .nav-link');
   const mobileNavLinks = document.querySelectorAll('#mobileNavDrawer .mobile-nav-link');
   
+  // Header elevation & shadow update on scroll
+  function updateHeaderScrolled() {
+    if (header) {
+      if (window.scrollY > 10) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    }
+  }
+
   // Dynamic active state tracker for desktop and mobile/tablet drawer
   function updateActiveNavState() {
     const scrollPos = window.scrollY + 160;
@@ -151,6 +163,8 @@ function initNavigation() {
   
   // Window scroll event
   window.addEventListener('scroll', () => {
+    updateHeaderScrolled();
+
     // Back to top visibility
     if (backToTopBtn) {
       if (window.scrollY > 400) {
@@ -163,7 +177,8 @@ function initNavigation() {
     updateActiveNavState();
   });
 
-  // Initial active state update on page load
+  // Initial active state and header scroll update on page load
+  updateHeaderScrolled();
   updateActiveNavState();
   
   if (backToTopBtn) {

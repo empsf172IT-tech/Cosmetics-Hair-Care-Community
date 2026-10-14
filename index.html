@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -67,7 +67,7 @@
 </head>
 
 <body
-  class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased selection:bg-[#B86F68] selection:text-white transition-colors duration-400 overflow-x-hidden w-full max-w-full relative">
+  class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased selection:bg-[#B86F68] selection:text-white transition-colors duration-400 w-full max-w-full relative">
 
   <!-- ==========================================================================
        TOP ANNOUNCEMENT BAR
@@ -81,15 +81,12 @@
   <!-- ==========================================================================
        STICKY LUXURY NAVIGATION BAR
        ========================================================================== -->
-  <!-- ==========================================================================
-       STICKY LUXURY NAVIGATION BAR
-       ========================================================================== -->
-  <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+  <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
     <div
       class="max-w-[1680px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-8 2xl:px-10 h-20 flex items-center justify-between">
 
       <!-- Brand Logo Wordmark (with guaranteed right margin from links) -->
-      <a href="#hero" class="flex items-center gap-3 group focus:outline-none flex-shrink-0 mr-4 xl:mr-6 2xl:mr-10" aria-label="STRANDÉ Home">
+      <a href="#hero" class="flex items-center gap-3 group focus:outline-none flex-shrink-0 mr-3 lg:mr-4 xl:mr-6 2xl:mr-10" aria-label="STRANDÉ Home">
         <div
           class="w-10 h-10 rounded-full bg-espresso text-champagne dark:bg-champagne dark:text-espresso flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105 border border-[#B86F68]/30 flex-shrink-0">
           <!-- Strand-inspired bespoke emblem SVG -->
@@ -107,9 +104,9 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Links (Properly spaced, balanced, no overflow) -->
+      <!-- Desktop Navigation Links (Properly spaced, balanced, visible on desktop/laptop viewports) -->
       <nav id="desktopNavLinks"
-        class="hidden xl:flex items-center justify-center gap-1.5 xl:gap-2.5 2xl:gap-4 min-[1680px]:gap-6 text-[10px] xl:text-[10.5px] 2xl:text-[11.5px] min-[1680px]:text-xs uppercase font-medium text-[#5F4A44] dark:text-[#E3D1BF] flex-1 min-w-0">
+        class="hidden lg:flex items-center justify-center gap-1 lg:gap-1.5 xl:gap-2.5 2xl:gap-4 min-[1680px]:gap-6 text-[9px] lg:text-[10px] xl:text-[10.5px] 2xl:text-[11.5px] min-[1680px]:text-xs uppercase font-medium text-[#5F4A44] dark:text-[#E3D1BF] flex-1 min-w-0">
         <a href="#hero" class="nav-link hover:text-[#B86F68] transition-colors active">Home</a>
         <a href="#discover" class="nav-link hover:text-[#B86F68] transition-colors">Discover</a>
         <a href="#quiz" class="nav-link hover:text-[#B86F68] transition-colors">Hair Quiz</a>
@@ -149,9 +146,9 @@
             class="hidden w-5 h-5 rounded-full bg-[#B86F68] text-white text-[10px] font-bold flex items-center justify-center">0</span>
         </button>
 
-        <!-- Mobile Navigation Hamburger -->
+        <!-- Mobile Navigation Hamburger (Visible on screens < lg) -->
         <button id="mobileMenuBtn" type="button"
-          class="xl:hidden w-10 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne flex items-center justify-center focus:outline-none flex-shrink-0"
+          class="lg:hidden w-10 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne flex items-center justify-center focus:outline-none flex-shrink-0"
           aria-label="Open Mobile Menu">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
