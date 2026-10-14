@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO & Brand Meta -->
+  <title>STRANDÉ — Intelligent Hair Care. Beautifully Personal.</title>
+  <meta name="description"
+    content="Discover STRANDÉ: a luxury cosmetics and hair-care community platform uniting personalized hair diagnostics, clean sulfate-free formulas, subscription replenishment, and inclusive curl collective wisdom." />
+  <meta name="keywords"
+    content="luxury hair care, sulfate-free shampoo, curl definition, hair diagnostic quiz, hair community, biomimetic peptides, scalp microbiome" />
+  <meta name="author" content="STRANDÉ Beauty-Tech / INFOTECH" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS 3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            espresso: {
+              DEFAULT: '#241916',
+              deep: '#160E0C',
+              surface: '#2C1F1B'
+            },
+            champagne: {
+              DEFAULT: '#E9D8C5',
+              light: '#F7EFE6',
+              muted: '#D3BCAB'
+            },
+            burntRose: {
+              DEFAULT: '#B86F68',
+              hover: '#CA7D76',
+              dark: '#97534D'
+            },
+            warmIvory: '#FAF6F0'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Design Tokens & Luxury Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body
+  class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased selection:bg-[#B86F68] selection:text-white transition-colors duration-400">
+
+  <!-- ==========================================================================
+       TOP ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <div
+    class="bg-espresso text-champagne text-[11px] md:text-xs py-2 px-4 text-center font-medium tracking-wider flex items-center justify-center gap-2 border-b border-[#3A2A25]">
+    <span class="inline-block w-2 h-2 rounded-full bg-[#B86F68] animate-pulse"></span>
+    <span>Complimentary Biomimetic Silk Comb & Travel Duo on orders over $75 • Carbon-Neutral Delivery</span>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY LUXURY NAVIGATION BAR
+       ========================================================================== -->
+  <!-- ==========================================================================
+       STICKY LUXURY NAVIGATION BAR
+       ========================================================================== -->
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div
+      class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 h-20 flex items-center justify-between gap-3 lg:gap-5">
+
+      <!-- Brand Logo Wordmark -->
+      <a href="#hero" class="flex items-center gap-3 group focus:outline-none flex-shrink-0" aria-label="STRANDÉ Home">
+        <div
+          class="w-10 h-10 rounded-full bg-espresso text-champagne dark:bg-champagne dark:text-espresso flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105 border border-[#B86F68]/30 flex-shrink-0">
+          <!-- Strand-inspired bespoke emblem SVG -->
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              d="M7 4c5 2 6 7 4 10s-5 4-2 7m8-17c-5 2-6 7-4 10s5 4 2 7" />
+          </svg>
+        </div>
+        <div class="flex flex-col justify-center">
+          <span
+            class="font-serif text-2xl md:text-3xl tracking-[0.18em] font-medium text-espresso dark:text-champagne leading-none">STRANDÉ</span>
+          <span
+            class="text-[9px] tracking-[0.25em] uppercase text-[#8F7670] dark:text-[#D3BCAB] mt-1 font-semibold leading-none">Intelligent
+            Hair Care</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Vertically centered, single-line baseline, including Home) -->
+      <nav id="desktopNavLinks"
+        class="hidden xl:flex items-center justify-center gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-6 text-[11px] 2xl:text-xs uppercase font-medium text-[#5F4A44] dark:text-[#E3D1BF] flex-1 max-w-5xl mx-2">
+        <a href="#hero" class="nav-link hover:text-[#B86F68] transition-colors active">Home</a>
+        <a href="#discover" class="nav-link hover:text-[#B86F68] transition-colors">Discover</a>
+        <a href="#quiz" class="nav-link hover:text-[#B86F68] transition-colors">Hair Quiz</a>
+        <a href="#routines" class="nav-link hover:text-[#B86F68] transition-colors">Routines</a>
+        <a href="#shop" class="nav-link hover:text-[#B86F68] transition-colors">Shop</a>
+        <a href="#sulfate-free" class="nav-link hover:text-[#B86F68] transition-colors">Sulfate-Free</a>
+        <a href="#subscriptions" class="nav-link hover:text-[#B86F68] transition-colors">Subscriptions</a>
+        <a href="#community" class="nav-link hover:text-[#B86F68] transition-colors">Community</a>
+        <a href="#reviews" class="nav-link hover:text-[#B86F68] transition-colors">Reviews</a>
+        <a href="#knowledge" class="nav-link hover:text-[#B86F68] transition-colors">Journal</a>
+        <a href="#about" class="nav-link hover:text-[#B86F68] transition-colors">Brand Story</a>
+      </nav>
+
+      <!-- Right Action Controls (Theme, Bag, Mobile Toggle) -->
+      <div class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
+
+        <!-- Theme Switcher Toggle -->
+        <button id="themeToggleBtn" type="button"
+          class="w-10 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne hover:border-[#B86F68] transition-all flex items-center justify-center focus:outline-none flex-shrink-0"
+          aria-label="Toggle Theme Mode" title="Toggle dark/light theme">
+          <svg id="themeIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <!-- Shopping Bag Trigger with Live Counter -->
+        <button id="openCartBtn" type="button"
+          class="relative px-3.5 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne hover:border-[#B86F68] transition-all flex items-center gap-2 focus:outline-none flex-shrink-0"
+          aria-label="View Shopping Bag">
+          <svg class="w-5 h-5 text-[#B86F68]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="hidden sm:inline text-xs font-semibold uppercase tracking-wider">Bag</span>
+          <span id="cartBadge"
+            class="hidden w-5 h-5 rounded-full bg-[#B86F68] text-white text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Mobile Navigation Hamburger -->
+        <button id="mobileMenuBtn" type="button"
+          class="xl:hidden w-10 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne flex items-center justify-center focus:outline-none flex-shrink-0"
+          aria-label="Open Mobile Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div id="mobileNavBackdrop"
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+  </div>
+  <div id="mobileNavDrawer"
+    class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[var(--bg-primary)] border-l border-[var(--border-color)] z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-[var(--border-color)]">
+        <div class="flex items-center gap-2">
+          <span
+            class="font-serif text-2xl tracking-[0.15em] font-medium text-espresso dark:text-champagne">STRANDÉ</span>
+        </div>
+        <button id="closeMobileNavBtn" type="button"
+          class="w-9 h-9 rounded-full bg-[var(--bg-card-subtle)] text-espresso dark:text-champagne flex items-center justify-center"
+          aria-label="Close menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav
+        class="flex flex-col py-6 space-y-3.5 text-sm font-medium uppercase tracking-wider text-espresso dark:text-champagne">
+        <a href="#hero" class="hover:text-[#B86F68] transition-colors py-1">01. Home</a>
+        <a href="#discover" class="hover:text-[#B86F68] transition-colors py-1">02. Discover</a>
+        <a href="#quiz" class="hover:text-[#B86F68] transition-colors py-1">03. Hair Diagnostic Quiz</a>
+        <a href="#routines" class="hover:text-[#B86F68] transition-colors py-1">04. Custom Routines</a>
+        <a href="#shop" class="hover:text-[#B86F68] transition-colors py-1">05. Product Collection</a>
+        <a href="#sulfate-free" class="hover:text-[#B86F68] transition-colors py-1">06. Sulfate-Free Science</a>
+        <a href="#subscriptions" class="hover:text-[#B86F68] transition-colors py-1">07. Replenishment Studio</a>
+        <a href="#community" class="hover:text-[#B86F68] transition-colors py-1">08. Community Hub</a>
+        <a href="#reviews" class="hover:text-[#B86F68] transition-colors py-1">09. Reviews & Gallery</a>
+        <a href="#knowledge" class="hover:text-[#B86F68] transition-colors py-1">10. Hair Journal</a>
+        <a href="#about" class="hover:text-[#B86F68] transition-colors py-1">11. Brand Story</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-[var(--border-color)] space-y-3">
+      <div class="flex items-center justify-between">
+        <span class="text-xs uppercase tracking-wider text-[#8F7670]">Display Theme</span>
+        <button id="themeToggleMobile" type="button"
+          class="p-2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-espresso dark:text-champagne">
+          <svg id="themeIconMobile" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+      <button id="openCartBtnMobile" type="button"
+        class="w-full py-3 rounded-xl btn-rose text-xs font-semibold flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <span>Open Bag (<span id="cartBadgeMobile">0</span> items)</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 01: PREMIUM HERO EXPERIENCE
+       ========================================================================== -->
+  <section id="hero"
+    class="relative min-h-[92vh] flex items-center overflow-hidden py-16 lg:py-24 border-b border-[var(--border-subtle)]">
+    <!-- Subtle luxury background ambient glow -->
+    <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#B86F68]/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[#E9D8C5]/15 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+        <!-- Hero Editorial Copy (Col 1-7) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#B86F68]"></span>
+            <span class="text-xs uppercase tracking-[0.2em] font-semibold text-[#B86F68]">Biomimetic Trichology
+              Platform</span>
+          </div>
+
+          <h1
+            class="font-serif text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal text-espresso dark:text-champagne leading-[1.08] tracking-tight">
+            Your Hair Has a Story.<br />
+            <span class="italic font-light text-[#B86F68]">Let’s Understand It.</span>
+          </h1>
+
+          <p
+            class="text-base sm:text-lg text-[#5F4A44] dark:text-[#E3D1BF] leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
+            STRANDÉ unites cellular cuticular science with bespoke wash-day personalization and an inclusive community
+            celebrating natural texture. Experience 100% sulfate-conscious formulations engineered to honor your hair's
+            unique structural identity.
+          </p>
+
+          <!-- Dual Call to Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+            <a href="#quiz"
+              class="w-full sm:w-auto px-8 py-4 rounded-2xl btn-rose font-medium text-sm tracking-wide shadow-lg flex items-center justify-center gap-2 group">
+              <span>Discover Your Hair Profile</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+            <a href="#shop"
+              class="w-full sm:w-auto px-8 py-4 rounded-2xl border border-[var(--border-color)] text-espresso dark:text-champagne hover:border-[#B86F68] font-medium text-sm tracking-wide bg-[var(--bg-card)] transition-colors flex items-center justify-center">
+              <span>Explore Hair Care</span>
+            </a>
+          </div>
+
+          <!-- Highlight Badges Row (with id="discover" anchor) -->
+          <div id="discover"
+            class="pt-8 border-t border-[var(--border-subtle)] grid grid-cols-3 gap-4 text-center sm:text-left scroll-mt-28">
+            <div>
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-espresso dark:text-champagne">100%</div>
+              <div class="text-[11px] text-[#8F7670] mt-0.5 uppercase tracking-wider">Sulfate-Conscious</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-espresso dark:text-champagne">14,800+</div>
+              <div class="text-[11px] text-[#8F7670] mt-0.5 uppercase tracking-wider">Community Journeys</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-espresso dark:text-champagne">Type 1–4C
+              </div>
+              <div class="text-[11px] text-[#8F7670] mt-0.5 uppercase tracking-wider">Universal Textures</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Editorial Imagery (Col 8-12) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Main editorial photo with graceful curved border -->
+            <div
+              class="rounded-[2.5rem] overflow-hidden border border-[var(--border-color)] shadow-2xl bg-[#EAE2D7] dark:bg-[#251A18] aspect-[4/5] img-zoom-wrapper">
+              <img src="https://images.pexels.com/photos/11434372/pexels-photo-11434372.jpeg"
+                alt="Healthy, radiant curly and textured hair" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Floating Luxury Feature Card 1 -->
+            <div
+              class="absolute -bottom-6 -left-6 sm:bottom-8 sm:-left-8 glass-panel p-4 rounded-2xl shadow-xl max-w-[240px] animate-float">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-xl bg-[#B86F68] text-white flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <div>
+                  <h6 class="text-xs font-bold text-espresso dark:text-champagne leading-tight">Cellular Biomimetics
+                  </h6>
+                  <p class="text-[10px] text-[#8F7670] mt-0.5">Bio-identical amino peptides that bond to keratin</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Luxury Feature Card 2 -->
+            <div
+              class="absolute -top-4 -right-4 sm:top-6 sm:-right-6 glass-panel py-2 px-3.5 rounded-full shadow-lg flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="text-xs font-semibold text-espresso dark:text-champagne">100% Leaping Bunny Certified</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 02: HAIR TYPE DISCOVERY & DIAGNOSTIC QUIZ
+       ========================================================================== -->
+  <section id="quiz" class="py-20 lg:py-28 bg-[var(--bg-secondary)] border-b border-[var(--border-subtle)] relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-semibold mb-3">Diagnostic Atelier</span>
+        <h2
+          class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso dark:text-champagne leading-tight">
+          Hair Type Discovery & Diagnostic Quiz
+        </h2>
+        <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] mt-3 leading-relaxed">
+          Answer 6 targeted questions on strand geometry, cuticle porosity, and scalp ecology to generate your custom
+          STRANDÉ Care Profile.
+        </p>
+      </div>
+
+      <!-- Main Quiz Interactive Card -->
+      <div id="quizContentCard"
+        class="bg-[var(--bg-card)] rounded-[2.5rem] border border-[var(--border-color)] p-6 sm:p-10 shadow-xl relative">
+        <!-- Progress Tracker Bar -->
+        <div class="mb-8">
+          <div class="flex items-center justify-between text-xs font-semibold text-[#8F7670] mb-2">
+            <span id="quizStepCounter">Question 1 of 6</span>
+            <span class="text-[#B86F68]">Intelligent Diagnostics</span>
+          </div>
+          <div class="w-full h-1.5 bg-[var(--border-color)] rounded-full overflow-hidden">
+            <div id="quizProgressBar" class="h-full bg-[#B86F68] rounded-full transition-all duration-300 w-1/6"></div>
+          </div>
+        </div>
+
+        <!-- Dynamic Question Content Placeholder -->
+        <div id="quizQuestionContainer" class="min-h-[280px]">
+          <!-- Rendered via JavaScript -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="mt-8 pt-6 border-t border-[var(--border-subtle)] flex items-center justify-between">
+          <button id="quizPrevBtn" type="button"
+            class="px-6 py-3 rounded-xl border border-[var(--border-color)] text-espresso dark:text-champagne text-xs font-semibold hover:bg-[var(--bg-card-subtle)] transition-colors opacity-40 pointer-events-none">
+            Back
+          </button>
+          <button id="quizNextBtn" type="button"
+            class="px-8 py-3.5 rounded-xl btn-rose text-xs font-semibold flex items-center gap-1 shadow-md" disabled>
+            <span>Continue</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mandatory Disclaimer -->
+        <div class="mt-6 text-center text-[11px] text-[#8F7670] italic">
+          * Note: This diagnostic questionnaire offers general cosmetic hair-care guidance and routine suggestions
+          rather than clinical dermatological diagnoses.
+        </div>
+      </div>
+
+      <!-- Quiz Results Screen (Hidden initially) -->
+      <div id="quizResultsContainer"
+        class="hidden bg-[var(--bg-card)] rounded-[2.5rem] border border-[var(--border-color)] p-6 sm:p-10 shadow-xl">
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <div
+            class="w-16 h-16 rounded-full bg-[#B86F68]/15 text-[#B86F68] flex items-center justify-center mx-auto mb-3">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span class="badge-pill bg-[#B86F68] text-white text-[11px] font-bold mb-2">Personalized Diagnostic
+            Completed</span>
+          <h3 id="resultProfileCode"
+            class="font-serif text-3xl font-medium text-espresso dark:text-champagne tracking-wider">STRAND-3B-HYDRA
+          </h3>
+          <p id="resultTextureTitle" class="text-sm font-semibold text-[#B86F68] mt-1"></p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <!-- Key Priorities -->
+          <div class="bg-[var(--bg-card-subtle)] p-6 rounded-2xl border border-[var(--border-subtle)]">
+            <h5 class="font-serif text-lg font-medium text-espresso dark:text-champagne mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#B86F68]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span>Cuticle Care Priorities</span>
+            </h5>
+            <ul class="space-y-2.5 text-xs text-[#5F4A44] dark:text-[#E3D1BF]">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B86F68]"></span> <span
+                  id="resultPriority1"></span></li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B86F68]"></span> <span
+                  id="resultPriority2"></span></li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B86F68]"></span> <span
+                  id="resultPriority3"></span></li>
+            </ul>
+          </div>
+
+          <!-- Suggested Routine Steps -->
+          <div class="bg-[var(--bg-card-subtle)] p-6 rounded-2xl border border-[var(--border-subtle)]">
+            <h5 class="font-serif text-lg font-medium text-espresso dark:text-champagne mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#B86F68]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+              <span>Suggested Wash-Day Regimen</span>
+            </h5>
+            <ul class="space-y-2.5 text-xs text-[#5F4A44] dark:text-[#E3D1BF]">
+              <li class="flex gap-2"><strong>Step 1:</strong> <span id="resultStep1"></span></li>
+              <li class="flex gap-2"><strong>Step 2:</strong> <span id="resultStep2"></span></li>
+              <li class="flex gap-2"><strong>Step 3:</strong> <span id="resultStep3"></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Suggested Products Trio -->
+        <div class="mb-8">
+          <h5 class="font-serif text-xl font-medium text-espresso dark:text-champagne mb-4 text-center md:text-left">
+            Compatible STRANDÉ Formulation Trio</h5>
+          <div id="resultTrioGrid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Dynamic trio items -->
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 border-t border-[var(--border-subtle)]">
+          <button id="addRoutineToBagBtn" type="button"
+            class="w-full sm:w-auto px-8 py-3.5 rounded-xl btn-rose text-xs font-semibold shadow-md flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span>Add Complete Suggested Routine to Bag</span>
+          </button>
+          <button id="retakeQuizBtn" type="button"
+            class="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-[var(--border-color)] text-espresso dark:text-champagne text-xs font-semibold hover:bg-[var(--bg-card-subtle)] transition-colors">
+            Retake Diagnostic Quiz
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 03: PERSONALIZED HAIR-CARE ROUTINES
+       ========================================================================== -->
+  <section id="routines" class="py-20 lg:py-28 border-b border-[var(--border-subtle)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-semibold mb-3">Targeted Regimens</span>
+          <h2
+            class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso dark:text-champagne leading-tight">
+            Personalized Hair-Care Routines
+          </h2>
+          <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] mt-2 max-w-xl">
+            Expertly architected rituals calibrated for specific strand densities, environmental humidity, and cuticle
+            porosity states.
+          </p>
+        </div>
+        <div class="flex-shrink-0">
+          <a href="#quiz"
+            class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#B86F68] hover:underline">
+            <span>Match Your Exact Profile</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 6 Routines Grid -->
+      <div id="routinesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 04: PREMIUM HAIR-CARE PRODUCT COLLECTION
+       ========================================================================== -->
+  <section id="shop" class="py-20 lg:py-28 bg-[var(--bg-secondary)] border-b border-[var(--border-subtle)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-semibold mb-3">Clean Bio-Active Atelier</span>
+        <h2
+          class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso dark:text-champagne leading-tight">
+          The STRANDÉ Formulation Collection
+        </h2>
+        <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] mt-3">
+          High-performance, biomimetic formulations crafted without sulfates, synthetic silicones, or parabens.
+        </p>
+      </div>
+
+      <!-- Filter Tabs and Sorting Bar -->
+      <div
+        class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-[var(--border-color)]">
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+          <button type="button" data-cat="all"
+            class="shop-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[#B86F68] text-white">All
+            Formulations</button>
+          <button type="button" data-cat="cleansers"
+            class="shop-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Cleansers</button>
+          <button type="button" data-cat="conditioners"
+            class="shop-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Conditioners</button>
+          <button type="button" data-cat="treatments"
+            class="shop-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Bond
+            Masques</button>
+          <button type="button" data-cat="scalp"
+            class="shop-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Scalp
+            Care</button>
+          <button type="button" data-cat="leavein"
+            class="shop-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Leave-in
+            & Oils</button>
+          <button type="button" data-cat="styling"
+            class="shop-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Curls
+            & Shields</button>
+        </div>
+
+        <!-- Sorting Select -->
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <label for="shopSortSelect" class="text-xs uppercase font-semibold text-[#8F7670]">Sort by:</label>
+          <select id="shopSortSelect" class="text-xs py-2 px-3 rounded-xl custom-input font-medium cursor-pointer">
+            <option value="featured">Featured First</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="productsCollectionGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 05: SULFATE-FREE & INGREDIENT-CONSCIOUS DISCOVERY
+       ========================================================================== -->
+  <section id="sulfate-free" class="py-20 lg:py-28 border-b border-[var(--border-subtle)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-semibold mb-3">Conscious Formulation Lab</span>
+        <h2
+          class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso dark:text-champagne leading-tight">
+          Sulfate-Free & Ingredient-Conscious Discovery
+        </h2>
+        <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] mt-3">
+          Filter and explore formulations crafted without stripping sulfates, non-soluble silicones, or artificial
+          fragrance.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Interactive Multi-Filter Control Sidebar (Col 1-4) -->
+        <div
+          class="lg:col-span-4 bg-[var(--bg-card)] p-6 rounded-3xl border border-[var(--border-color)] shadow-sm space-y-6">
+          <div class="flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]">
+            <h4 class="font-serif text-lg font-medium text-espresso dark:text-champagne">Formulation Filters</h4>
+            <button id="sfResetBtn" type="button" class="text-xs font-semibold text-[#B86F68] hover:underline">Reset
+              All</button>
+          </div>
+
+          <!-- Ingredient Badges Checkboxes -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-[#8F7670] mb-3">Clean Standards</label>
+            <div class="space-y-2.5 text-xs text-espresso dark:text-champagne">
+              <label class="flex items-center gap-2.5 cursor-pointer">
+                <input type="checkbox" id="sfSulfateOnly" checked
+                  class="w-4 h-4 rounded text-[#B86F68] focus:ring-[#B86F68]" />
+                <span>100% Sulfate-Free (SLS/SLES 0%)</span>
+              </label>
+              <label class="flex items-center gap-2.5 cursor-pointer">
+                <input type="checkbox" id="sfSiliconeFree"
+                  class="w-4 h-4 rounded text-[#B86F68] focus:ring-[#B86F68]" />
+                <span>Silicone-Free (No Dimethicone)</span>
+              </label>
+              <label class="flex items-center gap-2.5 cursor-pointer">
+                <input type="checkbox" id="sfVeganOnly" class="w-4 h-4 rounded text-[#B86F68] focus:ring-[#B86F68]" />
+                <span>100% Vegan & Leaping Bunny</span>
+              </label>
+              <label class="flex items-center gap-2.5 cursor-pointer">
+                <input type="checkbox" id="sfFragranceFree"
+                  class="w-4 h-4 rounded text-[#B86F68] focus:ring-[#B86F68]" />
+                <span>Fragrance-Free (Essential Extract Only)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Hair Texture Filter -->
+          <div>
+            <label for="sfHairTypeSelect"
+              class="block text-xs font-bold uppercase tracking-wider text-[#8F7670] mb-2">Hair Texture Pattern</label>
+            <select id="sfHairTypeSelect" class="w-full text-xs p-3 rounded-xl custom-input">
+              <option value="all">All Textures (Universal)</option>
+              <option value="straight">Type 1: Straight Strands</option>
+              <option value="wavy">Type 2: Wavy Textures</option>
+              <option value="curly">Type 3: Curly Spirals</option>
+              <option value="coily">Type 4: Coily & Kinky</option>
+            </select>
+          </div>
+
+          <!-- Primary Concern Filter -->
+          <div>
+            <label for="sfConcernSelect"
+              class="block text-xs font-bold uppercase tracking-wider text-[#8F7670] mb-2">Target Strand Concern</label>
+            <select id="sfConcernSelect" class="w-full text-xs p-3 rounded-xl custom-input">
+              <option value="all">All Concerns</option>
+              <option value="dryness">Dryness & Hydration</option>
+              <option value="color">Color Retention & Bleach</option>
+              <option value="frizz">Frizz & Humidity Flare-ups</option>
+              <option value="scalp">Scalp Flaking & Congestion</option>
+              <option value="breakage">Bond Breakage & Split Ends</option>
+            </select>
+          </div>
+
+          <!-- Product Category Filter -->
+          <div>
+            <label for="sfCategorySelect"
+              class="block text-xs font-bold uppercase tracking-wider text-[#8F7670] mb-2">Category</label>
+            <select id="sfCategorySelect" class="w-full text-xs p-3 rounded-xl custom-input">
+              <option value="all">All Categories</option>
+              <option value="cleansers">Gentle Cleansers</option>
+              <option value="conditioners">Conditioners</option>
+              <option value="treatments">Bond Repair Masques</option>
+              <option value="scalp">Scalp Serums</option>
+              <option value="leavein">Leave-in & Oils</option>
+              <option value="styling">Curl Creams & Shields</option>
+            </select>
+          </div>
+
+          <!-- Live Match Counter Badge -->
+          <div class="pt-4 border-t border-[var(--border-subtle)] text-center">
+            <span id="sfCountBadge" class="text-xs font-semibold text-[#B86F68]">Loading matching formulas...</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Results & Ingredient Education Panel (Col 5-12) -->
+        <div class="lg:col-span-8 space-y-8">
+
+          <!-- Scientific Nuance Banner -->
+          <div class="bg-[var(--bg-card)] p-6 rounded-3xl border border-[var(--border-color)] shadow-sm">
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-2xl bg-[#B86F68]/15 text-[#B86F68] flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="space-y-2">
+                <h4 class="font-serif text-xl font-medium text-espresso dark:text-champagne">The Science of Surfactants:
+                  Why Sulfate-Conscious Matters</h4>
+                <p class="text-xs sm:text-sm text-[#5F4A44] dark:text-[#E3D1BF] leading-relaxed">
+                  Sulfates (such as Sodium Lauryl Sulfate) are efficient cleansing agents, but their high negative
+                  charge density can strip away the hair fiber’s natural 18-MEA protective lipid layer. For curly,
+                  coily, colored, or chemically processed strands, this leads to elevated cuticle scales, hygral
+                  fatigue, and color fading.
+                </p>
+                <p class="text-xs text-[#8F7670] leading-relaxed italic">
+                  * Formulation Nuance: Sulfates are not inherently toxic, but milder coconut-derived isethionates and
+                  glucosides provide gentle micellar cleansing that preserves moisture balance without compromising
+                  hygiene.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Products Result Grid -->
+          <div id="sulfateFreeResultsGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Dynamic Cards via JS -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 06: SUBSCRIPTION & REPLENISHMENT STUDIO
+       ========================================================================== -->
+  <section id="subscriptions" class="py-20 lg:py-28 bg-[var(--bg-secondary)] border-b border-[var(--border-subtle)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-semibold mb-3">Seamless Replenishment</span>
+        <h2
+          class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso dark:text-champagne leading-tight">
+          The STRANDÉ Replenishment Studio
+        </h2>
+        <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] mt-3">
+          Never run out of your core wash-day essentials. Curate your custom delivery ritual with flexible cadence, VIP
+          discounts, and effortless online management.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Step 1 & 2: Builder Controls (Col 1-7) -->
+        <div class="lg:col-span-7 space-y-6">
+
+          <!-- Select Products Card -->
+          <div class="bg-[var(--bg-card)] p-6 sm:p-8 rounded-3xl border border-[var(--border-color)] shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] text-xs font-bold">Step 01</span>
+              <span class="text-xs text-[#8F7670]">Select 1 or more core formulas</span>
+            </div>
+            <h4 class="font-serif text-2xl font-medium text-espresso dark:text-champagne mb-4">Choose Your Replenishment
+              Ritual</h4>
+
+            <div id="subProductList" class="space-y-3">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Select Frequency Card -->
+          <div class="bg-[var(--bg-card)] p-6 sm:p-8 rounded-3xl border border-[var(--border-color)] shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] text-xs font-bold">Step 02</span>
+              <span class="text-xs text-[#8F7670]">Adjust delivery schedule</span>
+            </div>
+            <h4 class="font-serif text-2xl font-medium text-espresso dark:text-champagne mb-4">Select Delivery Frequency
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label
+                class="p-4 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-card-subtle)] cursor-pointer flex flex-col justify-between hover:border-[#B86F68] transition-all">
+                <div>
+                  <input type="radio" name="subFrequency" value="30" checked
+                    class="w-4 h-4 text-[#B86F68] focus:ring-[#B86F68]" />
+                  <span class="block font-bold text-sm text-espresso dark:text-champagne mt-2">Every 30 Days</span>
+                  <span class="text-[11px] text-[#8F7670] mt-0.5 block">Monthly Wash Cadence</span>
+                </div>
+                <span
+                  class="mt-3 text-[10px] uppercase font-bold text-[#B86F68] bg-[#B86F68]/10 py-1 px-2 rounded-full inline-block">Save
+                  20% + Gift</span>
+              </label>
+
+              <label
+                class="p-4 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-card-subtle)] cursor-pointer flex flex-col justify-between hover:border-[#B86F68] transition-all">
+                <div>
+                  <input type="radio" name="subFrequency" value="45"
+                    class="w-4 h-4 text-[#B86F68] focus:ring-[#B86F68]" />
+                  <span class="block font-bold text-sm text-espresso dark:text-champagne mt-2">Every 45 Days</span>
+                  <span class="text-[11px] text-[#8F7670] mt-0.5 block">Most Popular (6 Wks)</span>
+                </div>
+                <span
+                  class="mt-3 text-[10px] uppercase font-bold text-espresso dark:text-champagne bg-[var(--border-color)] py-1 px-2 rounded-full inline-block">Save
+                  15%</span>
+              </label>
+
+              <label
+                class="p-4 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-card-subtle)] cursor-pointer flex flex-col justify-between hover:border-[#B86F68] transition-all">
+                <div>
+                  <input type="radio" name="subFrequency" value="60"
+                    class="w-4 h-4 text-[#B86F68] focus:ring-[#B86F68]" />
+                  <span class="block font-bold text-sm text-espresso dark:text-champagne mt-2">Every 60 Days</span>
+                  <span class="text-[11px] text-[#8F7670] mt-0.5 block">Bi-Monthly Routine</span>
+                </div>
+                <span
+                  class="mt-3 text-[10px] uppercase font-bold text-espresso dark:text-champagne bg-[var(--border-color)] py-1 px-2 rounded-full inline-block">Save
+                  15%</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Step 3: Subscription Summary & Perks (Col 8-12) -->
+        <div
+          class="lg:col-span-5 bg-[var(--bg-card)] p-6 sm:p-8 rounded-3xl border border-[var(--border-color)] shadow-xl sticky top-28 space-y-6">
+          <div class="flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]">
+            <h4 class="font-serif text-2xl font-medium text-espresso dark:text-champagne">Subscription Summary</h4>
+            <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] text-xs font-bold">Step 03</span>
+          </div>
+
+          <!-- Itemized Breakdown -->
+          <div id="subSummaryItems" class="space-y-2">
+            <!-- Rendered via JS -->
+          </div>
+
+          <!-- Financial Calculation -->
+          <div class="space-y-2.5 pt-4 border-t border-[var(--border-subtle)] text-xs">
+            <div class="flex justify-between text-[#8F7670]">
+              <span>Regular Retail Value</span>
+              <span id="subSubtotal" class="font-semibold text-espresso dark:text-champagne">$70.00</span>
+            </div>
+            <div class="flex justify-between text-[#B86F68]">
+              <span>Subscriber VIP Privilege</span>
+              <span id="subDiscount" class="font-bold">-$14.00 (20%)</span>
+            </div>
+            <div class="flex justify-between text-[#8F7670]">
+              <span>Complimentary Shipping</span>
+              <span class="font-semibold text-emerald-600">FREE ($0.00)</span>
+            </div>
+            <div class="flex justify-between text-[#8F7670]">
+              <span>Scalp Massager Gift Included</span>
+              <span class="font-semibold text-espresso dark:text-champagne">Complimentary ($22 Value)</span>
+            </div>
+            <div
+              class="flex justify-between items-center text-sm font-serif font-bold text-espresso dark:text-champagne pt-3 border-t border-[var(--border-subtle)]">
+              <span>Estimated Order Total</span>
+              <span id="subTotal" class="text-xl text-[#B86F68]">$56.00</span>
+            </div>
+          </div>
+
+          <!-- Subscription Perks & Policy -->
+          <div
+            class="bg-[var(--bg-card-subtle)] p-4 rounded-2xl border border-[var(--border-subtle)] space-y-2 text-[11px] text-[#5F4A44] dark:text-[#E3D1BF]">
+            <div class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>1-Click Pause, Skip, or Cancel anytime in your member portal</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Zero lock-ins, contracts, or hidden fees</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>30-Day Strand Satisfaction Guarantee on every delivery</span>
+            </div>
+          </div>
+
+          <!-- Build Subscription CTA -->
+          <button id="buildSubBtn" type="button"
+            class="w-full py-4 rounded-2xl btn-rose font-medium text-sm shadow-lg flex items-center justify-center gap-2">
+            <span>Build My Subscription</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+
+          <div class="text-[10px] text-center text-[#8F7670] italic">
+            * Frontend demonstration model. Simulates subscription creation without live payment processing.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 07: HAIR-CARE COMMUNITY & DISCUSSION HUB
+       ========================================================================== -->
+  <section id="community" class="py-20 lg:py-28 border-b border-[var(--border-subtle)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-semibold mb-3">The Strand Society</span>
+          <h2
+            class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso dark:text-champagne leading-tight">
+            Hair-Care Community & Discussion Hub
+          </h2>
+          <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] mt-2 max-w-xl">
+            A collaborative global sanctuary where hair enthusiasts, curl masters, and cosmetic chemists share authentic
+            transformations, Q&A, and wash-day wisdom.
+          </p>
+        </div>
+        <div class="flex-shrink-0">
+          <button id="openNewDiscussionBtn" type="button"
+            class="px-6 py-3.5 rounded-2xl btn-rose text-xs font-semibold flex items-center gap-2 shadow-md">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            <span>Start a Discussion</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search and Filter Bar -->
+      <div
+        class="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-[var(--border-color)]">
+        <!-- Categories -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" data-cat="all"
+            class="comm-category-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[#B86F68] text-white">All
+            Conversations</button>
+          <button type="button" data-cat="textured"
+            class="comm-category-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Curly
+            & Coily</button>
+          <button type="button" data-cat="scalp"
+            class="comm-category-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Scalp
+            Wellness</button>
+          <button type="button" data-cat="routines"
+            class="comm-category-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Transformations</button>
+          <button type="button" data-cat="recommendations"
+            class="comm-category-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Recommendations</button>
+          <button type="button" data-cat="science"
+            class="comm-category-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Ingredient
+            Science</button>
+        </div>
+
+        <!-- Search Input -->
+        <div class="relative w-full md:w-72">
+          <svg class="w-4 h-4 text-[#8F7670] absolute left-3.5 top-1/2 -translate-y-1/2" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="text" id="commSearchInput" placeholder="Search topics, questions, tags..."
+            class="w-full text-xs pl-10 pr-4 py-2.5 rounded-xl custom-input" />
+        </div>
+      </div>
+
+      <!-- Community Posts Grid -->
+      <div id="communityPostsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 08: CUSTOMER REVIEWS & HAIR TRANSFORMATION GALLERY
+       ========================================================================== -->
+  <section id="reviews" class="py-20 lg:py-28 bg-[var(--bg-secondary)] border-b border-[var(--border-subtle)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-semibold mb-3">Real Hair Stories</span>
+        <h2
+          class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso dark:text-champagne leading-tight">
+          Customer Reviews & Transformation Gallery
+        </h2>
+        <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] mt-3">
+          Explore photographic proof and real customer testimonials across straight, wavy, curly, and coily strand
+          architectures.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <button type="button" data-cat="all"
+          class="review-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[#B86F68] text-white">All
+          Journeys</button>
+        <button type="button" data-cat="wavy"
+          class="review-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Type
+          2 Wavy</button>
+        <button type="button" data-cat="curly"
+          class="review-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Type
+          3 Curly</button>
+        <button type="button" data-cat="coily"
+          class="review-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Type
+          4 Coily</button>
+        <button type="button" data-cat="bleached"
+          class="review-filter-btn px-4 py-2 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all bg-[var(--bg-card)] text-espresso dark:text-champagne border border-[var(--border-color)]">Bleached
+          & Bond Repair</button>
+      </div>
+
+      <!-- Transformation Cards Grid -->
+      <div id="reviewsGalleryContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div class="mt-8 text-center text-xs text-[#8F7670] italic">
+        * Demonstration Note: Transformation imagery and customer profiles represent illustrative demonstration case
+        studies.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 09: HAIR-CARE KNOWLEDGE & EXPERT GUIDANCE
+       ========================================================================== -->
+  <section id="knowledge" class="py-20 lg:py-28 border-b border-[var(--border-subtle)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div>
+          <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-semibold mb-3">Trichology Masterclasses</span>
+          <h2
+            class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso dark:text-champagne leading-tight">
+            Hair-Care Knowledge & Expert Guidance
+          </h2>
+          <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] mt-2 max-w-xl">
+            In-depth cosmetic chemistry insights, porosity breakdowns, and wash-day guides written by trichologists and
+            formulation specialists.
+          </p>
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div id="articlesGridContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 10: BRAND STORY, NEWSLETTER & PREMIUM FOOTER
+       ========================================================================== -->
+  <section id="about" class="py-20 lg:py-28 bg-[var(--bg-secondary)] border-b border-[var(--border-subtle)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Brand Story Two-Column Editorial -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+        <div class="lg:col-span-6 space-y-6">
+          <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-semibold">The STRANDÉ Philosophy</span>
+          <h2
+            class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso dark:text-champagne leading-tight">
+            Intelligent Hair Care.<br />
+            <span class="italic font-light text-[#B86F68]">Beautifully Personal.</span>
+          </h2>
+          <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] leading-relaxed">
+            STRANDÉ was conceived on a single foundational premise: traditional hair care treats symptoms with heavy
+            synthetic silicone masks and aggressive sulfate detergents that mask damage rather than healing the
+            cuticular lipid architecture.
+          </p>
+          <p class="text-sm sm:text-base text-[#5F4A44] dark:text-[#E3D1BF] leading-relaxed">
+            Our collective brings together cosmetic formulation chemists, trichologists, and real textured-hair
+            communities. By fusing bio-identical plant micro-peptides with radical INCI transparency and inclusive
+            diagnostic personalization, we empower individuals to unlock their healthiest natural hair pattern.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-4 border-t border-[var(--border-subtle)]">
+            <div>
+              <h6 class="font-serif text-lg font-semibold text-espresso dark:text-champagne">Biomimetic Science</h6>
+              <p class="text-xs text-[#8F7670] mt-1">Peptides engineered to mirror human keratin polypeptides</p>
+            </div>
+            <div>
+              <h6 class="font-serif text-lg font-semibold text-espresso dark:text-champagne">Radical Transparency</h6>
+              <p class="text-xs text-[#8F7670] mt-1">Full concentration disclosure with zero greenwashing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div
+            class="rounded-[2.5rem] overflow-hidden border border-[var(--border-color)] shadow-xl bg-[#EBE3D8] dark:bg-[#251A18] aspect-[4/3] img-zoom-wrapper">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80"
+              alt="STRANDÉ luxury cosmetic formulation aesthetic" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <!-- VIP Newsletter Section -->
+      <div
+        class="bg-[var(--bg-card)] rounded-[2.5rem] border border-[var(--border-color)] p-8 sm:p-12 shadow-xl text-center max-w-3xl mx-auto">
+        <span class="badge-pill bg-[#B86F68]/15 text-[#B86F68] font-bold text-xs mb-3">VIP Society Invitation</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-medium text-espresso dark:text-champagne mb-3">Join The Strand
+          Society</h3>
+        <p class="text-xs sm:text-sm text-[#5F4A44] dark:text-[#E3D1BF] max-w-md mx-auto mb-6">
+          Receive seasonal wash-day blueprints, cosmetic chemist formulation deep-dives, and private 15% VIP community
+          privileges.
+        </p>
+
+        <form id="newsletterForm" class="max-w-md mx-auto space-y-3">
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input type="email" id="newsletterEmailInput" placeholder="Enter your email address..." required
+              class="flex-1 text-xs p-3.5 rounded-xl custom-input" />
+            <button type="submit"
+              class="py-3.5 px-6 rounded-xl btn-rose text-xs font-semibold whitespace-nowrap shadow-md">
+              Subscribe VIP
+            </button>
+          </div>
+          <div id="newsletterFeedback" class="hidden"></div>
+          <p class="text-[10px] text-[#8F7670] mt-2">By subscribing, you agree to receive STRANDÉ educational journals.
+            Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PREMIUM GLOBAL FOOTER
+       ========================================================================== -->
+  <footer class="bg-espresso text-champagne pt-16 pb-12 border-t border-[#352622]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Main Footer Grid (Balanced 12-Column Layout on Desktop) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16 text-xs">
+
+        <!-- Col 1: Brand & Atelier Concierge (Col 1-4) -->
+        <div class="lg:col-span-4 space-y-5">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-serif text-3xl tracking-[0.2em] font-medium text-champagne">STRANDÉ</span>
+            </div>
+            <span class="text-[10px] tracking-[0.22em] uppercase text-[#B86F68] font-semibold mt-1 block">Intelligent Hair Care</span>
+          </div>
+
+          <p class="text-[#D3BCAB] text-xs leading-relaxed max-w-sm">
+            Engineered through biomimetic trichology, cold-pressed plant lipids, and inclusive diagnostic personalization to restore the 18-MEA cuticular lipid barrier.
+          </p>
+
+          <!-- Atelier Flagship & Concierge Card -->
+          <div class="bg-[#2B1D19] border border-[#3E2C26] rounded-2xl p-4 text-xs space-y-2.5 max-w-sm shadow-inner">
+            <div class="text-[10px] uppercase font-bold tracking-wider text-[#B86F68] flex items-center justify-between">
+              <span>Flagship Atelier & Concierge</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" title="Concierge Active"></span>
+            </div>
+            <div class="text-[#D3BCAB] text-[11px] space-y-1.5 leading-relaxed">
+              <div class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-[#B86F68] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>450 Lexington Avenue, Suite 1800, New York, NY 10017</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-3.5 h-3.5 text-[#B86F68] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <a href="mailto:concierge@strande-hair.com" class="hover:text-[#B86F68] transition-colors underline decoration-[#B86F68]/40">concierge@strande-hair.com</a>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-3.5 h-3.5 text-[#B86F68] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <span>+1 (800) 840-STRAND • Mon–Sat 9AM–7PM EST</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sustainable Standards & Social Links -->
+          <div class="space-y-3 pt-1">
+            <div class="text-[11px] text-[#8F7670] flex flex-wrap gap-x-2 gap-y-1">
+              <span>Certified B-Corp</span>
+              <span>•</span>
+              <span>Leaping Bunny Approved</span>
+              <span>•</span>
+              <span>100% Recyclable PCR Glass</span>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex items-center gap-2.5 text-champagne pt-1">
+              <a href="javascript:void(0)"
+                class="w-8 h-8 rounded-full bg-[#2E201C] border border-[#3E2C26] hover:bg-[#B86F68] hover:border-[#B86F68] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Instagram">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+              </a>
+              <a href="javascript:void(0)"
+                class="w-8 h-8 rounded-full bg-[#2E201C] border border-[#3E2C26] hover:bg-[#B86F68] hover:border-[#B86F68] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="TikTok">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                </svg>
+              </a>
+              <a href="javascript:void(0)"
+                class="w-8 h-8 rounded-full bg-[#2E201C] border border-[#3E2C26] hover:bg-[#B86F68] hover:border-[#B86F68] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Pinterest">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.373-.056.23-.186.279-.429.168-1.602-.746-2.602-3.088-2.602-4.972 0-4.048 2.94-7.768 8.484-7.768 4.453 0 7.915 3.174 7.915 7.417 0 4.425-2.79 7.986-6.662 7.986-1.301 0-2.525-.677-2.943-1.478l-.801 3.056c-.29 1.108-1.077 2.498-1.604 3.351 1.206.372 2.493.575 3.827.575 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
+                </svg>
+              </a>
+              <a href="javascript:void(0)"
+                class="w-8 h-8 rounded-full bg-[#2E201C] border border-[#3E2C26] hover:bg-[#B86F68] hover:border-[#B86F68] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="YouTube">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Discover Links (Col 5-6) -->
+        <div class="lg:col-span-2 space-y-4">
+          <h5 class="font-bold uppercase tracking-wider text-white text-[11px] pb-2 border-b border-[#352622]">Discover</h5>
+          <ul class="space-y-2.5 text-[#D3BCAB] text-xs">
+            <li><a href="#hero" class="hover:text-[#B86F68] transition-colors flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-[#B86F68]"></span><span>Home</span></a></li>
+            <li><a href="#discover" class="hover:text-[#B86F68] transition-colors flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-transparent"></span><span>Editorial Discovery</span></a></li>
+            <li><a href="#quiz" class="hover:text-[#B86F68] transition-colors flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-transparent"></span><span>Hair Diagnostic Atelier</span></a></li>
+            <li><a href="#routines" class="hover:text-[#B86F68] transition-colors flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-transparent"></span><span>Custom Routine Index</span></a></li>
+            <li><a href="#knowledge" class="hover:text-[#B86F68] transition-colors flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-transparent"></span><span>Porosity Matrix Guide</span></a></li>
+            <li><a href="#about" class="hover:text-[#B86F68] transition-colors flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-transparent"></span><span>VIP Strand Society</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Formulation Collections (Col 7-8) -->
+        <div class="lg:col-span-2 space-y-4">
+          <h5 class="font-bold uppercase tracking-wider text-white text-[11px] pb-2 border-b border-[#352622]">Collections</h5>
+          <ul class="space-y-2.5 text-[#D3BCAB] text-xs">
+            <li><a href="#shop" class="hover:text-[#B86F68] transition-colors">Sulfate-Free Cleansers</a></li>
+            <li><a href="#shop" class="hover:text-[#B86F68] transition-colors">Biomimetic Conditioners</a></li>
+            <li><a href="#shop" class="hover:text-[#B86F68] transition-colors">Peptide Bond Masques</a></li>
+            <li><a href="#shop" class="hover:text-[#B86F68] transition-colors">Microbiome Scalp Drops</a></li>
+            <li><a href="#shop" class="hover:text-[#B86F68] transition-colors">Curl Sculpting Butters</a></li>
+            <li><a href="#shop" class="hover:text-[#B86F68] transition-colors">Botanical Finishing Oils</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Community & Knowledge (Col 9-10) -->
+        <div class="lg:col-span-2 space-y-4">
+          <h5 class="font-bold uppercase tracking-wider text-white text-[11px] pb-2 border-b border-[#352622]">Community</h5>
+          <ul class="space-y-2.5 text-[#D3BCAB] text-xs">
+            <li><a href="#community" class="hover:text-[#B86F68] transition-colors">The Strand Society Forum</a></li>
+            <li><a href="#reviews" class="hover:text-[#B86F68] transition-colors">Transformation Gallery</a></li>
+            <li><a href="#knowledge" class="hover:text-[#B86F68] transition-colors">Cosmetic Science Journal</a></li>
+            <li><a href="#community" class="hover:text-[#B86F68] transition-colors">Trichologist Q&A</a></li>
+            <li><a href="#reviews" class="hover:text-[#B86F68] transition-colors">Submit Your Journey</a></li>
+            <li><a href="#sulfate-free" class="hover:text-[#B86F68] transition-colors">INCI Ingredient Lab</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Care & Policies (Col 11-12) -->
+        <div class="lg:col-span-2 space-y-4">
+          <h5 class="font-bold uppercase tracking-wider text-white text-[11px] pb-2 border-b border-[#352622]">Care & Policies</h5>
+          <ul class="space-y-2.5 text-[#D3BCAB] text-xs">
+            <li><a href="#subscriptions" class="hover:text-[#B86F68] transition-colors">Subscription Studio</a></li>
+            <li><a href="#subscriptions" class="hover:text-[#B86F68] transition-colors">Pause or Skip Delivery</a></li>
+            <li><a href="javascript:void(0)"
+                onclick="showToast('Carbon-neutral delivery across North America, UK & EU.')"
+                class="hover:text-[#B86F68] transition-colors">Carbon-Neutral Shipping</a></li>
+            <li><a href="javascript:void(0)"
+                onclick="showToast('STRANDÉ 30-Day Guarantee: 100% refund if not completely satisfied with your hair results.')"
+                class="hover:text-[#B86F68] transition-colors">30-Day Strand Guarantee</a></li>
+            <li><a href="javascript:void(0)"
+                onclick="showToast('STRANDÉ adheres to GDPR and California Consumer Privacy Act standards.')"
+                class="hover:text-[#B86F68] transition-colors">Privacy Standards</a></li>
+            <li><a href="javascript:void(0)"
+                onclick="showToast('Terms of Service: All demonstration formulations and community posts protected.')"
+                class="hover:text-[#B86F68] transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright & Legal Statement -->
+      <div
+        class="pt-8 border-t border-[#352622] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-[#8F7670]">
+        <div class="flex items-center gap-2">
+          <span>© 2026 STRANDÉ Beauty-Tech Inc. All rights reserved.</span>
+          <span class="hidden sm:inline">•</span>
+          <span class="hidden sm:inline">Original INFOTECH Company Concept</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="text-[#D3BCAB]/70">Intelligent Hair Care. Beautifully Personal.</span>
+          <span class="hidden md:inline text-[#3E2C26]">|</span>
+          <span class="text-[#D3BCAB]/70">Single-Page Architecture</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SLIDE-OUT SHOPPING BAG DRAWER
+       ========================================================================== -->
+  <div id="cartBackdrop"
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+  </div>
+  <div id="cartDrawer"
+    class="fixed top-0 right-0 bottom-0 w-96 max-w-[90vw] bg-[var(--bg-primary)] border-l border-[var(--border-color)] z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
+    <!-- Header -->
+    <div class="p-6 border-b border-[var(--border-color)] flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-[#B86F68]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <h4 class="font-serif text-xl font-medium text-espresso dark:text-champagne">Your Curated Bag</h4>
+      </div>
+      <button id="closeCartBtn" type="button"
+        class="w-8 h-8 rounded-full bg-[var(--bg-card-subtle)] text-espresso dark:text-champagne flex items-center justify-center hover:bg-[#B86F68] hover:text-white transition-colors"
+        aria-label="Close Shopping Bag">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Items List / Empty State -->
+    <div class="flex-1 overflow-y-auto p-6 space-y-4">
+      <div id="cartEmptyState" class="hidden py-16 text-center space-y-3">
+        <div
+          class="w-16 h-16 rounded-full bg-[var(--bg-card-subtle)] text-[#8F7670] flex items-center justify-center mx-auto">
+          <svg class="w-8 h-8 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+        </div>
+        <h5 class="font-serif text-lg text-espresso dark:text-champagne font-medium">Your shopping bag is empty</h5>
+        <p class="text-xs text-[#8F7670] max-w-xs mx-auto">Explore our formulation collection or take the diagnostic
+          quiz to find your ideal ritual.</p>
+        <button type="button"
+          onclick="closeCartDrawer(); document.getElementById('shop').scrollIntoView({behavior:'smooth'});"
+          class="mt-4 px-6 py-2.5 rounded-xl btn-rose text-xs font-semibold">
+          Discover Products
+        </button>
+      </div>
+
+      <div id="cartItemsList" class="space-y-3">
+        <!-- Dynamic Cart Items via JS -->
+      </div>
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div id="cartFooter" class="p-6 border-t border-[var(--border-color)] bg-[var(--bg-card)] space-y-4">
+      <!-- Promo Code Field -->
+      <div class="flex gap-2">
+        <input type="text" id="promoCodeInput" placeholder="Promo code (e.g. STRANDE15)"
+          class="flex-1 text-xs p-2.5 rounded-xl custom-input uppercase" />
+        <button id="applyPromoBtn" type="button"
+          class="px-4 py-2.5 rounded-xl border border-[var(--border-color)] text-xs font-semibold text-espresso dark:text-champagne hover:bg-[var(--bg-card-subtle)]">
+          Apply
+        </button>
+      </div>
+
+      <!-- Financial Totals -->
+      <div class="space-y-1.5 text-xs">
+        <div class="flex justify-between text-[#8F7670]">
+          <span>Subtotal</span>
+          <span id="cartSubtotal" class="font-semibold text-espresso dark:text-champagne">$0.00</span>
+        </div>
+        <div id="cartDiscountRow" class="hidden flex justify-between text-[#B86F68]">
+          <span>VIP Discount</span>
+          <span id="cartDiscountAmount" class="font-bold">-$0.00</span>
+        </div>
+        <div class="flex justify-between text-[#8F7670]">
+          <span>Carbon-Neutral Shipping</span>
+          <span class="text-emerald-600 font-semibold">COMPLIMENTARY ($0.00)</span>
+        </div>
+        <div
+          class="flex justify-between items-center text-sm font-serif font-bold text-espresso dark:text-champagne pt-2 border-t border-[var(--border-subtle)]">
+          <span>Estimated Total</span>
+          <span id="cartTotal" class="text-lg text-[#B86F68]">$0.00</span>
+        </div>
+      </div>
+
+      <!-- Checkout Button -->
+      <button id="checkoutBtn" type="button"
+        class="w-full py-3.5 rounded-2xl btn-rose font-semibold text-xs tracking-wider uppercase shadow-lg flex items-center justify-center gap-2">
+        <span>Proceed to Simulated Checkout</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </button>
+
+      <div class="text-[10px] text-center text-[#8F7670] italic">
+        * Prototype Checkout: Simulates transaction verification without processing real currency.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GENERIC LIGHTBOX & MODAL CONTAINER
+       ========================================================================== -->
+  <div id="genericModal"
+    class="fixed inset-0 z-50 pointer-events-none flex items-center justify-center p-4 sm:p-6 md:p-8">
+    <div id="genericModalBackdrop" onclick="closeGenericModal()"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+    <div id="genericModalPanel"
+      class="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[var(--bg-primary)] rounded-[2.5rem] border border-[var(--border-color)] shadow-2xl p-6 sm:p-10 opacity-0 transform scale-95 transition-all duration-300 z-10">
+      <button type="button" onclick="closeGenericModal()"
+        class="absolute top-6 right-6 w-9 h-9 rounded-full bg-[var(--bg-card-subtle)] text-espresso dark:text-champagne flex items-center justify-center hover:bg-[#B86F68] hover:text-white transition-colors"
+        aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div id="genericModalContent">
+        <!-- Dynamically Populated Content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING BACK TO TOP BUTTON
+       ========================================================================== -->
+  <button id="backToTopBtn" type="button"
+    class="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-2xl glass-panel shadow-xl text-espresso dark:text-champagne border border-[var(--border-color)] flex items-center justify-center hover:bg-[#B86F68] hover:text-white hover:border-[#B86F68] transition-all duration-300 opacity-0 pointer-events-none translate-y-4 group cursor-pointer"
+    aria-label="Scroll to top of page" title="Back to top">
+    <svg class="w-5 h-5 text-current transition-transform duration-300 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Floating Toast Notification Container -->
+  <div id="appToast"
+    class="fixed bottom-6 right-6 z-50 transition-all duration-300 transform translate-y-12 opacity-0 pointer-events-none">
+  </div>
+
+  <!-- Main JavaScript Engine -->
+  <script src="app.js"></script>
+</body>
+
+</html>
